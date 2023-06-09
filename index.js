@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 3001
 app.use(bodyParser.json())
 
 app.get('/', function (req, res) {
-  res.send('Something Different')
+  res.send('deployment test version 1.0')
 })
 
 app.post('/signup', function (req, res) {
