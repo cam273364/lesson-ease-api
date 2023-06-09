@@ -9,6 +9,7 @@ require('dotenv').config();
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 var jwt = require('jsonwebtoken');
+const PORT = process.env.PORT || 3001
 
 
 // parse application/json
@@ -114,7 +115,7 @@ app.get('/test', function (req, res) {
 //destructure userid off of request body in line 40/41
 //findbyidandupdate
 //const userid ...rest = body
-app.listen(3001, () => {
+app.listen(PORT, () => {
 
     mongoose.connect(process.env.MONGOURL, {
         useNewUrlParser: true,
